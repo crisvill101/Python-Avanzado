@@ -1,0 +1,39 @@
+'''          CUENTA BANCARIA
+Crea una clase "CuentaBancaria" con atributos como número de cuenta y saldo. 
+Implementa métodos para depositar y retirar dinero, y muestra el saldo actual.'''
+
+#Creamos la clase
+class CuentaBancaria:
+    def __init__(self, numero, saldo = 0):
+        self.numero = numero
+        self.saldo = saldo
+ 
+
+#crear método para deposito
+    def depositar(self, cantidad):
+        self.saldo += cantidad
+        print(f"Se depositaron {cantidad} Euros. El saldo actual es de {self.saldo} Euros.")
+    
+
+#crear método para retirar
+    def retirar(self, cantidad):
+        if self.saldo >= cantidad:
+            self.saldo -= cantidad
+            print(f"Se retiraron {cantidad} Euros. El saldo actual es de {self.saldo} Euros.")
+        else:
+            print("No puede retirar esa cantida por saldo insuficiente")
+        
+#crear método para mostrar el saldo actual
+    def mostrar_saldo(self):
+        print(f"El saldo actual es {self.saldo} Euros")
+
+    
+
+#Ejemplo de uso
+cuenta = CuentaBancaria("1200 0000 4444 394859944")
+cuenta.depositar(100)
+cuenta.retirar(50)
+cuenta.retirar(100)
+cuenta.mostrar_saldo()
+
+
