@@ -1,6 +1,6 @@
 '''    COCHE 
 Crea una clase "Coche" con atributos como marca, modelo y año. Implementa un método para encender el 
-coche y otro para apagarlo (puedes simulae el encendido y apagado con una variable booleana). '''
+coche y otro para apagarlo (puedes simular el encendido y apagado con una variable booleana). '''
 
 #defino la clase
 class Coche:
