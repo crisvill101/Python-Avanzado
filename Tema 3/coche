@@ -4,10 +4,10 @@ coche y otro para apagarlo (puedes simular el encendido y apagado con una variab
 
 #defino la clase con sus atributos
 class Coche:
-    def __init__(self, marca, modelo, año):
+    def __init__(self, marca, modelo, anio):
         self.marca = marca
         self.modelo = modelo
-        self.año = año
+        self.anio = anio
         self.encendido = False
        
     #funcion encender
