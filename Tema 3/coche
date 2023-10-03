@@ -19,7 +19,7 @@ class Coche:
         self.encendido = False
 
 #selecciono mi_coche y compruebo el estado actual
-mi_coche = Coche("hyundai", "tucson", 2023)
+mi_coche = Coche("Hyundai", "Tucson", 2023)
 print("El coche esta encendido: ", mi_coche.encendido)
 #lo enciendo
 mi_coche.encender()
