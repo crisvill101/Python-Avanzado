@@ -21,9 +21,9 @@ class Coche:
 #selecciono mi_coche y compruebo el estado actual
 mi_coche = Coche("Hyundai", "Tucson", 2023)
 print("El coche esta encendido: ", mi_coche.encendido)
-#lo enciendo
+#apago mi_coche
 mi_coche.encender()
 print("El coche esta encendido: ", mi_coche.encendido)
-#lo apago
+#enciendo mi_coche
 mi_coche.apagar()
 print("El coche esta encendido: ", mi_coche.encendido)
