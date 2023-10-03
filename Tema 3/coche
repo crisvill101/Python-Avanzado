@@ -2,7 +2,7 @@
 Crea una clase "Coche" con atributos como marca, modelo y año. Implementa un método para encender el 
 coche y otro para apagarlo (puedes simular el encendido y apagado con una variable booleana). '''
 
-#defino la clase
+#defino la clase con sus atributos
 class Coche:
     def __init__(self, marca, modelo, año):
         self.marca = marca
@@ -18,7 +18,7 @@ class Coche:
     def apagar(self):
         self.encendido = False
 
-#seleccion mi_coche y compruebo el estado actual
+#selecciono mi_coche y compruebo el estado actual
 mi_coche = Coche("hyundai", "tucson", 2023)
 print("El coche esta encendido: ", mi_coche.encendido)
 #lo enciendo
