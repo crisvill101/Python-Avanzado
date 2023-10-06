@@ -1,0 +1,54 @@
+'''               TIENDA ONLINE
+Crea una clase "Producto" con atributos como nombre, precio y cantidad en stock. 
+Luego, crea una clase "Tienda" que contenga una lista de productos disponibles 
+y métodos para agregar productos, mostrar el inventario y realizar una compra.
+'''
+
+
+#Creamos la clase producto con sus atributos
+class Producto:
+    def __init__(self, nombre,precio,stock):
+        self.nombre = nombre
+        self.precio = precio
+        self.stock = stock
+
+#Creamos la clase Tienda, donde contenemos esos prodcutos y añadimos a nuestra lista
+class Tienda:
+    def __init__(self):
+        self.productos = []
+    
+    def agregar_producto(self, producto):
+        self.productos.append(producto)
+        
+#Y creamos las funcinalidades a esa clase   
+    def mostrar_inventario(self):
+        for producto in self.productos:
+            print(f"{producto.nombre} - Precio: {producto.precio} EU - Stock: {producto.stock}")
+
+    def comprar_producto(self, nombre, cantidad):
+        for producto in self.productos: 
+            if producto.nombre == nombre:
+                if producto.stock >= cantidad:
+                    producto.stock -= cantidad
+                    print(f"Compra Exitosa, Total: {producto.precio * cantidad} EU")
+                else:
+                    print("Noy hay suficiente stock")
+
+                return
+            
+        print("Producto no encontrado")
+
+ #Ejemplo de Uso
+ 
+tienda = Tienda()  
+producto1 = Producto("Camiseta", 20, 50)
+producto2 = Producto("Pantalon", 30, 30) 
+
+tienda.agregar_producto(producto1)
+tienda.agregar_producto(producto2)
+
+tienda.mostrar_inventario()
+
+tienda.comprar_producto("Camiseta", 2)
+tienda.mostrar_inventario()
+tienda.comprar_producto("Camiseta", 200)
